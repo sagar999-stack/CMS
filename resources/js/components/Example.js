@@ -1,19 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router,Switch,Route } from "react-router-dom"
+import Nav from './Nav';
+import Sidebar from "./Sidebar"
+import Footer from "./Footer"
+
+
 
 function Example() {
     return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
+      <Router>
+          <>
+          <Nav/>
+          <Sidebar/>
+            <Switch>
 
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+            </Switch>
+
+            <Footer/>
+          </>
+      </Router>
+
     );
 }
 
